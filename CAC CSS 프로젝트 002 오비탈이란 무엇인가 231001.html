@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>CAC CSS 프로젝트 002 오비탈이란 무엇인가 231001</title>
+    <style>
+      body {
+        background-image: url('오비탈 모양.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+      }
+      .box {
+        float: left;
+        display: inline-block;
+        text-align: center;
+        width: 80px;
+        height: 25px;
+        margin: 10px 1px;
+        padding: 3px 2px 3px 2px;
+        border-style: double;
+        border-radius: 15px;
+      }
+      #s-orb {
+        position: relative;
+        left: 10px;
+      }
+      #p-orb {
+        position: relative;
+        left: 50px;
+      }
+      #d-orb {
+        position: relative;
+        left: 90px;
+      }
+      .orbital-shape {
+        clear: left;
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background: radial-gradient(circle, white, orange, red);
+      }
+      .orbital-node {
+        list-style:none;
+      }
+      .orbital-node li {
+        float: left;
+        border: 2px dashed blue;
+      }
+      .orbital-node li a:link {
+      text-decoration:none;
+      text-align:center;
+      padding: 5px;
+      }
+      .orbital-node li a:hover {
+      background-color:green;
+      color:pink;
+      }
+    </style>
+  </head>
+<body>
+  <h1>전자에 대한 파동함수, 오비탈</h1>
+  <h2><a href="https://namu.wiki/w/%EC%98%A4%EB%B9%84%ED%83%88" target="_blank">오비탈</a></h2>
+  <p>아마도 내가 가장 좋아했던 화학적 개념은 오비탈이 아닐까 싶다.</p>
+  <p>간단히 말해, 오비탈은 전자의 확률밀도함수이다.</p>
+  <p>다시 말하면, 전자의 위치에 대한 정보를 지닌다.</p>
+  <p>또, 다른 오비탈은 다른 수의 마디를 (node) 갖는다. (가장 아래에 예시)</p>
+  <p>오비탈은 종류에 따라 알파벳으로 적고, 바로 아래의 세 개가 그 예시이다.</p>
+  <div class="box" id="s-orb">s-오비탈</div> <div class="box" id="p-orb">p-오비탈</div> <div class="box" id="d-orb">d-오비탈</div>
+  <div class="orbital-shape"></div>
+  <p><strong>예시) s-orbital</strong></p>
+  <nav>
+    <ul class="orbital-node">
+      <li><a href="#">node of s : 0</a></li>
+      <li><a href="#">node of p : 1</a></li>
+      <li><a href="#">node of d : 2</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
