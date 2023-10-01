@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>CAC CSS 프로젝트 003 영화의 위대함에 대하여 231001</title>
+    <style>
+      .elements-list {
+        width : 200px;
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows:repeat(2, 80px);
+        grid-template-areas: 
+          "box-1 box-2"
+          "box-3 box-4";
+      }
+      .element {
+        padding: 30px;
+        color:antiquewhite;
+        text-align:center;
+        transition: 1s linear;     
+      }
+      .element:hover {
+        transform: rotate(180deg);
+      }
+      .element-1 {
+        background-color:red;
+        grid-area:box-1;
+      }
+      .element-2 {
+        background-color:green;
+        grid-area:box-2;
+      }
+      .element-3 {
+        background-color:blue;
+        grid-area:box-3;
+      }     
+      .element-4 {
+        background-color:black;
+        grid-area:box-4; 
+      }
+    </style>
+  </head>
+<body>
+  <h1>인류가 만든 가장 위대한 예술, 영화</h1>
+  <h2><a href="https://namu.wiki/w/%EC%97%90%EB%B8%8C%EB%A6%AC%EC%94%BD%20%EC%97%90%EB%B8%8C%EB%A6%AC%EC%9B%A8%EC%96%B4%20%EC%98%AC%20%EC%95%B3%20%EC%9B%90%EC%8A%A4" target="_blank">에브리씽 에브리웨어 올 앳 원스</a></h2>
+  <p>뜬금 없지만, 나는 영화 역시 화학만큼이나 좋아한다.
+  내가 생각해본 적 없는 이야기를 시각적으로 경험한다는 점이 매력적으로 다가오기 때문이다.
+  위 링크에서 확인할 수 있는 영화는 올해 아카데미 작품상을 받은 영화인데, 표현으로도 서사로도 상당히 뛰어난 작품이다.
+  </p>
+  <div class="elements-list">
+    <div class="element element-1">각본</div>
+    <div class="element element-2">촬영</div>
+    <div class="element element-3">편집</div>
+    <div class="element element-4">연기</div>
+  </div>
+</body>
+</html>
