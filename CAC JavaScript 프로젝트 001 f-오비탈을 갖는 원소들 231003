@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>CAC JavaScript 프로젝트 001 f-오비탈을 갖는 원소들 231003</title>
+    <style>
+      table, td {
+        border:2px solid blueviolet;
+        border-collapse: separate;
+      }
+      td {
+        padding: 3px;
+        font-size:1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>란타넘족</h1>
+    <p>사실 화학과에서 란타넘족을 다루는 경우는 드물다.
+    이는 대부분의 경우 d-오비탈까지만 다루기 때문에, f-오비탈을 갖는 란타넘족 원소들은 언급할 일이 없기 때문이다.
+    그러나 나는 여기에 속하는 15개의 원소들 역시 언급해보고 싶다. (원소 번호 57번부터 71번까지이므로)
+    위 링크에 관련 내용이 있고, 보기 좋게 한 줄에 원소가 5개 들어가는 표로 정리하려 한다.
+    만약 f-오비탈까지 배우는 커리큘럼에 속했다면, 더 재밌게 화학을 공부했을 것 같다.</p>
+
+    <script>
+      var endNo = 71;
+      var startNo = 57;
+      var totalNo = endNo - startNo + 1;
+      alert("원소번호 57번부터 71번까지의 란타넘 족의 원소 갯수: " + totalNo);
+    </script>
+
+    <script>
+      var i, j;
+      var eleNum = prompt("란타넘족 원소는 몇 개 인가요?");
+      var colNum = prompt("한 줄에는 몇 개의 원소가 들어가나요?");
+
+      if (eleNum % colNum == 0) 
+        rowNum = parseInt(eleNum / colNum);
+      else
+        rowNum = parseInt(eleNum / colNum) + 1;
+
+      document.write("<table>");
+      for (i = 0; i < rowNum; i++) {
+        document.write("<tr>");
+        for (j = 1; j <= colNum; j++) {
+          lanthNo = i * colNum + j + 56;
+          if ((lanthNo - 56) > eleNum) break;
+          document.write("<td> 원소번호 " + lanthNo + " </td>"); 
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    </script>
+  </body>
+  </html>
